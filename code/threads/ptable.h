@@ -1,5 +1,6 @@
 #include "bitmap.h"
 #include "pcb.h"
+#include "synch.h"
 #define MAX_PROCESS 10
 
 class PTable
@@ -21,5 +22,3 @@ public:
   void Remove(int pid);
   char* GetFileName(int id);
 };
-
-s

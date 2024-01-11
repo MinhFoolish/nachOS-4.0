@@ -1,3 +1,5 @@
+#include "synch.h"
+
 class PCB{
 private:
     Semaphore *joinsem; // Semaphore for join process.

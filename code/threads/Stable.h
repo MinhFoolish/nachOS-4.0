@@ -1,5 +1,6 @@
 #include "bitmap.h"
 #include "sem.h"
+#include "synch.h"
 #define MAX_SEMAPHORE 10
 
 class STable
