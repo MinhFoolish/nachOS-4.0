@@ -10,8 +10,8 @@ private:
   Sem *semTab[MAX_SEMAPHORE];
 
 public:
-  STable(){};
-  ~STable(){};
+  STable();
+  ~STable();
   int Create(char *name, int init);
   int Wait(char *name);
   int Signal(char *name);

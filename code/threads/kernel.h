@@ -29,6 +29,7 @@ class PostOfficeOutput;
 class SynchConsoleInput;
 class SynchConsoleOutput;
 class SynchDisk;
+class Semaphore;
 
 class Kernel
 {
@@ -37,9 +38,10 @@ public:
   // Interpret command line arguments
   ~Kernel(); // deallocate the kernel
 
-  void Initialize(); // initialize the kernel -- separated
-                     // from constructor because
-                     // refers to "kernel" as a global
+  void Initialize(
+      char *userProgName = NULL); // initialize the kernel -- separated
+                                  // from constructor because
+                                  // refers to "kernel" as a global
 
   void ThreadSelfTest(); // self test of threads and synchronization
 
@@ -54,7 +56,7 @@ public:
   Bitmap *gPhysPageBitMap;
   STable *semTab;
   PTable *pTab;
-  
+
   Thread *currentThread; // the thread holding the CPU
   Scheduler *scheduler;  // the ready list
   Interrupt *interrupt;  // interrupt status

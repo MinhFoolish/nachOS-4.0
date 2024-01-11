@@ -220,6 +220,8 @@ PROGRAM = nachos
 # See the instructions at the top of the file for more information.
 #
 
+
+
 LIB_H = ../lib/bitmap.h\
 	../lib/copyright.h\
 	../lib/debug.h\
@@ -270,7 +272,16 @@ THREAD_H = ../threads/alarm.h\
 	../threads/switch.h\
 	../threads/synch.h\
 	../threads/synchlist.h\
-	../threads/thread.h
+	../threads/thread.h\
+	../threads/ptable.h\
+	../threads/pcb.h\
+	../threads/stable.h\
+	../threads/sem.h\
+	../threads/thread.cc\
+	../threads/ptable.cc\
+	../threads/pcb.cc\
+	../threads/stable.cc\
+	../threads/sem.cc\
 
 THREAD_C = ../threads/alarm.cc\
 	../threads/kernel.cc\
@@ -281,6 +292,7 @@ THREAD_C = ../threads/alarm.cc\
 	../threads/thread.cc
 
 THREAD_O = alarm.o kernel.o main.o scheduler.o synch.o thread.o
+THREAD_O = alarm.o kernel.o main.o scheduler.o synch.o thread.o ptable.o pcb.o stable.o sem.o
 
 USERPROG_H = ../userprog/addrspace.h\
 	../userprog/syscall.h\
